@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ProyectosDataService } from './service/proyectos-data.service';
 
 @Component({
   selector: 'app-proyectos',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./proyectos.component.css']
 })
 export class ProyectosComponent {
+  constructor(
+    private proyectosDataService: ProyectosDataService,
+  ) {}
 
+  ngOnInit(): void {
+
+  }
+
+  get data() {
+    return this.proyectosDataService.data;
+  }
 }
