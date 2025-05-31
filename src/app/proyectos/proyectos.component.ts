@@ -18,4 +18,8 @@ export class ProyectosComponent {
   get data() {
     return this.proyectosDataService.data;
   }
+
+  getURI(nombre: string) {
+    return encodeURI(nombre);
+  }
 }
