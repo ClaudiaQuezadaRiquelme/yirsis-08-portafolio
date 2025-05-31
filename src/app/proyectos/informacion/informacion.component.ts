@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { ProyectosDataService } from '../service/proyectos-data.service';
 
 @Component({
   selector: 'app-informacion',
@@ -8,9 +9,11 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class InformacionComponent {
   param: string = '';
+  proyecto: any;
 
   constructor(
-    private arouter: ActivatedRoute
+    private arouter: ActivatedRoute,
+    private proyectosDataService: ProyectosDataService,
   ) {
     let id = '';
     console.log(arouter);
@@ -19,5 +22,10 @@ export class InformacionComponent {
       id = nombre;
     });
     this.param = decodeURI(id);    
+  }
+
+  ngOnInit(): void {
+    this.proyecto = this.proyectosDataService.getProyecto(this.param);
+    console.log(this.proyecto);
   }
 }

@@ -13,4 +13,10 @@ export class ProyectosDataService {
   get data() {
     return this._data;
   }
+
+  getProyecto(nombre: string) {
+    let proyecto = this._data.filter((p) => p.nombre === nombre );
+    console.log("proyecto:",proyecto);
+    return proyecto[0];
+  }
 }
