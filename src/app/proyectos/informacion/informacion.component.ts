@@ -9,7 +9,7 @@ import { ProyectosDataService } from '../service/proyectos-data.service';
 })
 export class InformacionComponent {
   param: string = '';
-  proyecto: any;
+  proyectoData: any;
 
   constructor(
     private arouter: ActivatedRoute,
@@ -25,7 +25,7 @@ export class InformacionComponent {
   }
 
   ngOnInit(): void {
-    this.proyecto = this.proyectosDataService.getProyecto(this.param);
-    console.log(this.proyecto);
+    this.proyectoData = this.proyectosDataService.getProyecto(this.param);
+    console.log(this.proyectoData);
   }
 }

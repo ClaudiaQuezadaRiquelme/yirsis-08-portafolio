@@ -1,1 +1,24 @@
-<p>{{param}} works!</p>
+<div class="row">
+    <div class="col-12 col-md-4">
+        <img class="img-thumbnail rounded" [src]="proyectoData.img" [alt]="proyectoData.img">
+        <h2>{{ proyectoData.nombre }}</h2>
+        <div class="mt-2">
+            <a  target="_blank" 
+                [href]="proyectoData.url" 
+                class="btn btn-primary w-100"
+            >Visitar</a>
+        </div>
+    </div>
+    <div class="col-12 col-md-8">
+        <h2>Descripción</h2>
+        <hr>
+        <p>{{ proyectoData.descripcion }}</p>
+
+        <h2>Tecnologías</h2>
+        <div class="list-group">
+            <span *ngFor="let tecnologia of proyectoData.tecnologias" class="list-group-item list-group-item-action">{{ tecnologia }}</span>
+        </div>
+
+        <button class="btn btn-dark w-100 my-3">Volver a proyectos</button>
+    </div>
+</div>
