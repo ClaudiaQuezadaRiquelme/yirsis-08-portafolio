@@ -1,5 +1,11 @@
 <div class="row">
     <div *ngFor="let proyecto of data" class="col-12 col-md-4">
-        ppppppp
+        <div class="card mg-2" style="width: 18rem;">
+            <img [src]="proyecto.img" class="card-img-top p-2" alt="proyecto.nombre">
+            <div class="card-body">
+                <h5 class="card-title">{{proyecto.nombre}}</h5>
+                <a target="_blank" [href]="proyecto.url" class="btn btn-primary">Visitar</a>
+            </div>
+        </div>
     </div>
 </div>
