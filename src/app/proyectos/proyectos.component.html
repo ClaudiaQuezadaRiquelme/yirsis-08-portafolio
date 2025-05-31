@@ -4,7 +4,12 @@
             <img [src]="proyecto.img" class="card-img-top p-2" alt="proyecto.nombre">
             <div class="card-body">
                 <h5 class="card-title">{{proyecto.nombre}}</h5>
-                <a target="_blank" [href]="proyecto.url" class="btn btn-primary">Visitar</a>
+                <div class="mt-2">
+                    <a target="_blank" [href]="proyecto.url" class="btn btn-primary w-100">Visitar</a>
+                </div>
+                <div class="mt-2">
+                    <a target="_blank" [href]="proyecto.url" class="btn btn-secondary w-100">Detalles</a>
+                </div>
             </div>
         </div>
     </div>
